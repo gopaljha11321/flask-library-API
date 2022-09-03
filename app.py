@@ -13,7 +13,7 @@ app=Flask(__name__)
 
 @app.route('/')
 def home():
-    return"home_page"
+    return "Welcome to libraray managment system!!"
 #First_API
 @app.route('/list',methods=['GET','POST'])
 def list():
@@ -152,7 +152,7 @@ def data_range():
 
 
 if __name__=="__main__":
-    app.run(debug=True, port=8000)
+    app.run()
 
 
 
