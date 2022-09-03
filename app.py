@@ -20,11 +20,13 @@ def list():
     name=request.json["name"]
     data=collection.find({"book_name":name})
     l1=[]
+    l=1;
     for i in data:
         output={}
+        output["S.No"]=l
         output["Book name"]=i["book_name"]
-        output['Id']=i['_id']
         l1.append(output)
+        l+=1
     print(l1)
     return l1
 
@@ -38,7 +40,6 @@ def range():
     for i in data:
         output={}
         output["Name"]=i["book_name"]
-        output["Id"]=i["_id"]
         output['RentPrice']=i["rent"]
         l1.append(output)
     return l1
@@ -52,10 +53,12 @@ def books_list():
     category=request.json["category"]
     data=collection.find({'$and':[{'rent':{'$gte':start}},{'rent':{"$lte":end}},{"book_name":name},{"category":category}]})
     l1=[]
+    l=1
     for i in data:
         output={}
+        output["S.No"]=l
         output["Name"]=i["book_name"]
-        output["Id"]=i["_id"]
+        l+=1;
         l1.append(output)
     return l1
 
@@ -72,6 +75,7 @@ def issue():
     collection2.insert_one({"Price":data["price"],"Book_name":data["book_name"],"Person_name":data["person_name"],"Issue_date":data['issue_date']})
     return "Data entry successfully"
 
+#Fifth_API
 @app.route('/return',methods=['POST'])
 def total():
     price=10
@@ -98,6 +102,7 @@ def total():
     collection2.update_one({"Person_name":request.json["person_name"]},data_update)
     return str(dif*price)
 
+#Sixth_API
 @app.route('/issue_list',methods=['POST'])
 def issue_list():
     price=10
@@ -110,7 +115,8 @@ def issue_list():
     output["Total_count"]=count_total
     output["Issue_count"]=issue_count
     return output
-    
+
+#Seventh_API   
 @app.route('/total_rent',methods=['POST'])
 def total_rent():
     price=10
@@ -121,6 +127,7 @@ def total_rent():
         sum+=i["Amount"]
     return str(sum)
 
+#Eighth_API
 @app.route('/person_list',methods=['POST'])
 def person_list():
     price=10
@@ -133,6 +140,7 @@ def person_list():
         k+=1  
     return data
 
+#Ninth_API
 @app.route('/date_range',methods=['POST'])
 def data_range():
     start=request.json["start"]
