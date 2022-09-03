@@ -4,6 +4,7 @@ eg.
 {
 	"name":"ramayan"
 }
+
 <br>Second API ("https://flask-project-library-system.herokuapp.com/range")
 eg. 
   {
@@ -41,6 +42,7 @@ eg.
 {
 	"book_name":"c"
 }
+
 <br> Seventh API('https://flask-project-library-system.herokuapp.com/total_rent')
 eg. 
 {
@@ -52,6 +54,7 @@ eg.
 {
 	"person_name":"gopal"
 }
+
 <br> Nineth API('https://flask-project-library-system.herokuapp.com/date_range')
 eg.
 {
