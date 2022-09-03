@@ -1,0 +1,10 @@
+<h1>APIs List </h1>
+<br>First API ("https://flask-project-library-system.herokuapp.com/list")
+<br>Second API ("https://flask-project-library-system.herokuapp.com/range")
+<br>Third API ("https://flask-project-library-system.herokuapp.com/books_list")
+<br>Fourth API ("https://flask-project-library-system.herokuapp.com/issue")
+<br> Fifth API ("https://flask-project-library-system.herokuapp.com/return")
+<br> Sixth API ("https://flask-project-library-system.herokuapp.com/issue_list")
+<br> Seventh API('https://flask-project-library-system.herokuapp.com/total_rent')
+<br> Eighth API('https://flask-project-library-system.herokuapp.com/person_list')
+<br> Nineth API('https://flask-project-library-system.herokuapp.com/date_range')
