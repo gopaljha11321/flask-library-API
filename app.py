@@ -13,7 +13,7 @@ app=Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Welcome to libraray managment system!!"
+    return "Welcome to library management system!!"
 #First_API
 @app.route('/list',methods=['GET','POST'])
 def list():
